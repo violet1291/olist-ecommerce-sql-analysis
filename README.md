@@ -49,5 +49,7 @@ The top 5 highest products by price value are from the categories: “computer a
 
 **Sellers Analysis**
 
-According to the data, the main sellers across all three years are located in the cities of São Paulo, Ibitinga, and Santo André, with an average of 1,774 orders among these cities, with an average of ratings of 3.6 points of customer satisfaction.
+According to the data, the leading sellers over the three-year period are concentrated in the cities of São Paulo, Ibitinga, and Santo André. On average, sellers in these cities recorded approximately 1,774 orders and achieved a mean customer rating of 3.6, indicating moderate customer satisfaction. In addition, the top five sellers by customer rating were analyzed (see code in the Sellers Analysis section).
  
+
+ **Customer Analysis**

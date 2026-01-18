@@ -10,22 +10,7 @@ GO
   SELECT
  -- YEAR(rev.review_creation_date) AS year_review,
   sellers.seller_city AS city,
-  sellers.seller_id,
- COUNT(DISTINCT orders.order_id) AS orders
-  FROM olist_sellers_dataset sellers
-  JOIN olist_order_items_dataset orders ON orders.seller_id = sellers.seller_id
-  LEFT JOIN olist_order_reviews_dataset rev ON rev.order_id = orders.order_id
-  WHERE YEAR(rev.review_creation_date) IS NOT NULL   --Null values of year are not taked into account for this query
-  GROUP BY  sellers.seller_city, sellers.seller_id
-  ORDER BY COUNT(DISTINCT orders.order_id) DESC;
-
-
-  -- 2. Frequency of orders by city (this data is only of those sellers that have ratings)
-
-  SELECT
- -- YEAR(rev.review_creation_date) AS year_review,
-  sellers.seller_city AS city,
-  --sellers.seller_id,
+ -- sellers.seller_id,
  COUNT(DISTINCT orders.order_id) AS orders
   FROM olist_sellers_dataset sellers
   JOIN olist_order_items_dataset orders ON orders.seller_id = sellers.seller_id
@@ -35,8 +20,7 @@ GO
   ORDER BY COUNT(DISTINCT orders.order_id) DESC;
 
 
-
-  --3.Ratings of the cities with the most orders
+  2--.Ratings of the cities with the most orders
 
 SELECT
   sellers.seller_city AS city,
@@ -54,7 +38,7 @@ ORDER BY avg_review_score DESC;
 
 
 
--- 3.Top sellers by rating and city
+-- 3.Top 5 sellers by rating
 
  WITH avg_rating_sellers AS (
    SELECT
@@ -79,4 +63,4 @@ FROM (
     FROM avg_rating_sellers
 ) ranked
 WHERE seller_rank <= 5
-ORDER BY year_review,city, seller_rank;
+ORDER BY year_review, seller_rank;
