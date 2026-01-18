@@ -53,3 +53,15 @@ According to the data, the leading sellers over the three-year period are concen
  
 
  **Customer Analysis**
+
+ The Repurchase Rate of the customers of Olist was extracted. According to the data, around 3% of Olist customers place a second order or more. This indicates low customer loyalty, which is expected since Olist operates as a marketplace offering products from many different brands. The low repurchase rate reflects typical marketplace behavior, where customers are more likely to switch sellers rather than remain loyal to a single platform or brand.
+
+In 2016, new customers accounted for 98.86% of the total, while returning customers represented only 1.14%. A similar pattern was observed in 2017, with new customers comprising 97.22% and returning customers 2.78%. Finally, in the last year of the analysis, the share of returning customers declined to 2.11%.
+
+Regarding geographic distribution, customers with the highest number of orders over the three-year period were predominantly from São Paulo, followed by Rio de Janeiro.
+
+
+ **Customer Satisfaction**
+
+
+

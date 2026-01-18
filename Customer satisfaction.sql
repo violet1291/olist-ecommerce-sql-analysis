@@ -6,7 +6,6 @@ USE Brazilian_Ecommerce
 GO
 
 
-
 --1. Top 10 products with worst ratings
 
    WITH avg_rating_sellers AS (
@@ -46,9 +45,6 @@ SELECT
 FROM worst_ranks
 WHERE product_rank <= 10
 ORDER BY year_review, category_name;
-
-
-
 
 
 -- 2. Top 5 lowest-rated sellers by city
