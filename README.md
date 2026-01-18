@@ -3,7 +3,7 @@ The objective of this project is to analyze the commercial performance of an e-c
 
 **Dataset description**
 
-This project uses the Olist Brazilian E-Commerce Dataset, a public dataset available on Kaggle that contains real transactional data from a Brazilian e-commerce marketplace. To have access to the dataset visit this link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+This project uses the Olist Brazilian E-Commerce Dataset, a public dataset available on Kaggle that contains real transactional data from a Brazilian e-commerce marketplace. To have access to the dataset go to this link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 This dataset represents orders made between 2016 and 2018, including information about customers, sellers, products, payments, reviews, and logistics.
 
@@ -47,3 +47,7 @@ The top 5 highest products by price value are from the categories: “computer a
 ![alt text](image.png)
 
 
+**Sellers Analysis**
+
+According to the data, the main sellers across all three years are located in the cities of São Paulo, Ibitinga, and Santo André, with an average of 1,774 orders among these cities, with an average of ratings of 3.6 points of customer satisfaction.
+ 

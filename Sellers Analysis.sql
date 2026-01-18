@@ -8,7 +8,7 @@ GO
 -- 1. Frequency of orders by seller and year
 
   SELECT
-  YEAR(rev.review_creation_date) AS year_review,
+ -- YEAR(rev.review_creation_date) AS year_review,
   sellers.seller_city AS city,
   sellers.seller_id,
  COUNT(DISTINCT orders.order_id) AS orders
@@ -16,24 +16,41 @@ GO
   JOIN olist_order_items_dataset orders ON orders.seller_id = sellers.seller_id
   LEFT JOIN olist_order_reviews_dataset rev ON rev.order_id = orders.order_id
   WHERE YEAR(rev.review_creation_date) IS NOT NULL   --Null values of year are not taked into account for this query
-  GROUP BY   YEAR(rev.review_creation_date), sellers.seller_city, sellers.seller_id
-  ORDER BY YEAR(rev.review_creation_date), COUNT(DISTINCT orders.order_id) DESC;
+  GROUP BY  sellers.seller_city, sellers.seller_id
+  ORDER BY COUNT(DISTINCT orders.order_id) DESC;
 
 
-
-  --2.Ratings by seller
+  -- 2. Frequency of orders by city (this data is only of those sellers that have ratings)
 
   SELECT
-  YEAR(rev.review_creation_date) AS year_review,
+ -- YEAR(rev.review_creation_date) AS year_review,
   sellers.seller_city AS city,
-  sellers.seller_id,
-  AVG(rev.review_score) AS avg_review_score
+  --sellers.seller_id,
+ COUNT(DISTINCT orders.order_id) AS orders
   FROM olist_sellers_dataset sellers
   JOIN olist_order_items_dataset orders ON orders.seller_id = sellers.seller_id
   LEFT JOIN olist_order_reviews_dataset rev ON rev.order_id = orders.order_id
   WHERE YEAR(rev.review_creation_date) IS NOT NULL   --Null values of year are not taked into account for this query
-  GROUP BY   YEAR(rev.review_creation_date), sellers.seller_city, sellers.seller_id
-  ORDER BY YEAR(rev.review_creation_date), AVG(rev.review_score) DESC;
+  GROUP BY  sellers.seller_city
+  ORDER BY COUNT(DISTINCT orders.order_id) DESC;
+
+
+
+  --3.Ratings of the cities with the most orders
+
+SELECT
+  sellers.seller_city AS city,
+  --sellers.seller_id,
+  AVG(rev.review_score) AS avg_review_score
+FROM olist_sellers_dataset sellers
+JOIN olist_order_items_dataset orders
+  ON orders.seller_id = sellers.seller_id
+LEFT JOIN olist_order_reviews_dataset rev
+  ON rev.order_id = orders.order_id
+ AND rev.review_creation_date IS NOT NULL
+WHERE sellers.seller_city IN ('sao paulo', 'ibitinga', 'santo andre')
+GROUP BY sellers.seller_city
+ORDER BY avg_review_score DESC;
 
 
 
