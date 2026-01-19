@@ -44,7 +44,7 @@ When comparing cumulative sales from January to September in both years, overall
 
 The top 5 highest products by price value are from the categories: “computer accessories”, “bed bath table”, “garden tools” and lastly, “furniture decor” with prices from USD 54 to USD 138 approximately.
 
-<img width="713" height="183" alt="image" src="https://github.com/user-attachments/assets/3113a81f-2dbf-427f-8cd4-53657895172b" />
+<img width="613" height="153" alt="image" src="https://github.com/user-attachments/assets/3113a81f-2dbf-427f-8cd4-53657895172b" />
 
 **Sellers Analysis**
 
