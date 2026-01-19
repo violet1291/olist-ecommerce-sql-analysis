@@ -61,7 +61,3 @@ In 2016, new customers accounted for 98.86% of the total, while returning custom
 Regarding geographic distribution, customers with the highest number of orders over the three-year period were predominantly from São Paulo, followed by Rio de Janeiro.
 
 
- **Customer Satisfaction**
-
-
-
